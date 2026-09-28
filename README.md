@@ -36,10 +36,12 @@ In the Windower launcher, add a profile:
 | Setting | Value |
 | --- | --- |
 | Executable | `<Phoenix>\bootloader\phoenix-loader.exe` |
-| Arguments | `--server play.phoenix-xi.com --user YOURNAME --serverport 51220` |
+| Arguments | `--server play.phoenix-xi.com --user YOURNAME` |
 | Password | leave empty |
 
 Replace `YOURNAME` with your Phoenix username. Leave the password empty; you'll type it in the console window when you launch.
+
+> **Don't add `--serverport`.** Earlier versions of this guide included `--serverport 51220`. After a Phoenix change, the game no longer launches with it. If your profile has it, delete it.
 
 ## Step 5: Set up XIPivot
 
@@ -79,6 +81,7 @@ Launch the profile. In game, `//pivot status` should list `EraDATs`.
 | Error 3331, "FINAL FANTASY XI has been updated" | Get the latest `patch.ver` from this repository (Step 3) |
 | "Could not connect to lobby server" | The server is down. Check the official launcher |
 | Menus or maps look wrong | Redo Step 5 |
+| Game doesn't launch | Remove `--serverport 51220` from the profile's arguments (Step 4) |
 | Windower closes instantly | Clear the password field in the profile (Step 4) |
 | Another server's Windower setup broke | Run that server's switch script |
 
